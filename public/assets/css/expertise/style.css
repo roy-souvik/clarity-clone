@@ -1,0 +1,16 @@
+.no-gap-lr{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.no-gap-l{
+    padding-left: 0 !important;
+}
+.no-gap-r{
+    padding-right: 0 !important;
+}
+
+.expertise-loading{
+    display: block;
+    font-size: 40px;
+    text-align: center;
+}

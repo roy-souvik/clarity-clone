@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+ <defs>
+  <linearGradient id="facebook_bg" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="64">
+   <stop stop-color="#5e79af"/>
+   <stop offset="1" stop-color="#394877"/>
+  </linearGradient>
+ </defs>
+ <rect fill="url(#facebook_bg)" width="64" height="64"/>
+ <path fill="#ffffff" d="M38,18c0.855,0,5,0,5,0v-7h-7.07C27.842,11,26,16.041,26,20v4.602V25h-5v7h5v21h10V32h6l1-7h-7v-5
+	C36,18.368,37.143,18,38,18z"/>
+</svg>

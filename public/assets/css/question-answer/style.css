@@ -1,0 +1,74 @@
+.answers-list article{
+    margin-top: 40px;
+    position: relative;
+}
+.answers-list article .image {
+    display: block;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+.avatar {
+    display: block;
+    margin: 0;
+}
+.user-profile-image-wrapper {
+    background: #d9d9d9 none repeat scroll 0 0;
+    border-radius: 50%;
+    display: inline-block;
+    overflow: hidden;
+}
+.user-profile-image.small, .user-profile-image.size-50 {
+    height: 50px;
+    width: 50px;
+}
+.answers-list article .content::before, .answers-list article .content::after {
+    content: " ";
+    display: table;
+}
+.answers-list article .content::after {
+    clear: both;
+}
+.answers-list article .content::before, .answers-list article .content::after {
+    content: " ";
+    display: table;
+}
+.answers-list article .content {
+    overflow: visible;
+    padding-left: 70px;
+}
+.question-input-cta {
+    -moz-appearance: none;
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) inset;
+    box-sizing: border-box;
+    color: #cecece;
+    cursor: text;
+    display: block;
+    font-size: 15px;
+    height: 46px;
+    line-height: 21px;
+    margin-top: 20px;
+    max-width: 430px;
+    min-width: 0;
+    outline: medium none;
+    padding: 11px;
+    width: auto;
+}
+.add_a_question, .add_a_question:active, .add_a_question:hover{
+    /* There is a transition effect because it is in parent style.css*/
+    font-weight: normal;
+    color: #5db824;
+    font-size: 16px;
+    text-decoration: none;
+    transition: none;
+}
+.state-loading{
+    display: none;
+}
+
+.answerright .bottques, .answerright .questiontop span, .answerright .questiontop br{
+    display: none;
+}

@@ -1,0 +1,17 @@
+Laravel:
+---------------------------------
+php artisan migrate
+
+php artisan db:seed
+
+php artisan db:seed --class=CategoriesTableSeeder
+
+php artisan serve
+
+php artisan route:scan  --  Scan a directory for model annotations
+
+Git:
+---------------------------------
+git remote prune origin
+
+composer self-update --rollback to return to version 1.1.0

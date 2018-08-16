@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="MonsterCall" default="local" basedir="." description="MonsterCall build file based on phing">
+	<!-- Load project settings from external file -->
+	<property file="build/project.properties" />
+	<!-- This is the local build environment -->
+	<target name="local">
+		<copy file="build/.env.dist" tofile=".env" overwrite="true">
+			<filterchain>
+				<replacetokens begintoken="%" endtoken="%">
+					<token key="APP_ENV" value="${local.APP_ENV}" />
+					<token key="APP_DEBUG" value="${local.APP_DEBUG}" />
+					<token key="APP_DEBUG_FULL" value="${local.APP_DEBUG_FULL}" />
+					<token key="APP_KEY" value="${local.APP_KEY}" />
+					<token key="APP_URL" value="${local.APP_URL}" />
+          <token key="DB_CONNECTION" value="${local.DB_CONNECTION}" />
+					<token key="DB_HOST" value="${local.DB_HOST}" />
+					<token key="DB_PORT" value="${local.DB_PORT}" />
+					<token key="DB_DATABASE" value="${local.DB_DATABASE}" />
+					<token key="DB_USERNAME" value="${local.DB_USERNAME}" />
+          <token key="DB_PASSWORD" value="${local.DB_PASSWORD}" />
+          <token key="CACHE_DRIVER" value="${local.CACHE_DRIVER}" />
+          <token key="SESSION_DRIVER" value="${local.SESSION_DRIVER}" />
+          <token key="QUEUE_DRIVER" value="${local.QUEUE_DRIVER}" />
+          <token key="REDIS_HOST" value="${local.REDIS_HOST}" />
+          <token key="REDIS_PASSWORD" value="${local.REDIS_PASSWORD}" />
+          <token key="REDIS_PORT" value="${local.REDIS_PORT}" />
+          <token key="FACEBOOK_CLIENT_ID" value="${local.FACEBOOK_CLIENT_ID}" />
+          <token key="FACEBOOK_CLIENT_SECRET" value="${local.FACEBOOK_CLIENT_SECRET}" />
+          <token key="FACEBOOK_REDIRECT_URL" value="${local.FACEBOOK_REDIRECT_URL}" />
+          <token key="LINKEDIN_CLIENT_ID" value="${local.LINKEDIN_CLIENT_ID}" />
+          <token key="LINKEDIN_CLIENT_SECRET" value="${local.LINKEDIN_CLIENT_SECRET}" />
+          <token key="LINKEDIN_REDIRECT_URL" value="${local.LINKEDIN_REDIRECT_URL}" />
+          <token key="TWITTER_CLIENT_ID" value="${local.TWITTER_CLIENT_ID}" />
+          <token key="TWITTER_CLIENT_SECRET" value="${local.TWITTER_CLIENT_SECRET}" />
+          <token key="TWITTER_REDIRECT_URL" value="${local.TWITTER_REDIRECT_URL}" />
+          <token key="LINKEDIN_AUTH_CALLBACK" value="${local.LINKEDIN_AUTH_CALLBACK}" />
+          <token key="FACEBOOK_VERIFICATION_CALLBACK" value="${local.FACEBOOK_VERIFICATION_CALLBACK}" />
+          <token key="LINKEDIN_VERIFICATION_CALLBACK" value="${local.LINKEDIN_VERIFICATION_CALLBACK}" />
+          <token key="TWITTER_VERIFICATION_CALLBACK" value="${local.TWITTER_VERIFICATION_CALLBACK}" />
+          <token key="MAIL_DRIVER" value="${local.MAIL_DRIVER}" />
+          <token key="MAIL_HOST" value="${local.MAIL_HOST}" />
+          <token key="MAIL_PORT" value="${local.MAIL_PORT}" />
+          <token key="MAIL_USERNAME" value="${local.MAIL_USERNAME}" />
+          <token key="MAIL_PASSWORD" value="${local.MAIL_PASSWORD}" />
+          <token key="MAIL_ENCRYPTION" value="${local.MAIL_ENCRYPTION}" />
+					<token key="TWILIO_SID" value="${local.TWILIO_SID}" />
+					<token key="TWILIO_TOKEN" value="${local.TWILIO_TOKEN}" />
+					<token key="TWILIO_FROM" value="${local.TWILIO_FROM}" />
+				</replacetokens>
+			</filterchain>
+		</copy>
+	</target>
+
+	<target name="dev">
+		<copy file="build/.env.dist" tofile=".env" overwrite="true">
+			<filterchain>
+				<replacetokens begintoken="%" endtoken="%">
+          <token key="APP_ENV" value="${dev.APP_ENV}" />
+					<token key="APP_DEBUG" value="${dev.APP_DEBUG}" />
+					<token key="APP_DEBUG_FULL" value="${dev.APP_DEBUG_FULL}" />
+					<token key="APP_KEY" value="${dev.APP_KEY}" />
+					<token key="APP_URL" value="${dev.APP_URL}" />
+          <token key="DB_CONNECTION" value="${dev.DB_CONNECTION}" />
+					<token key="DB_HOST" value="${dev.DB_HOST}" />
+					<token key="DB_PORT" value="${dev.DB_PORT}" />
+					<token key="DB_DATABASE" value="${dev.DB_DATABASE}" />
+					<token key="DB_USERNAME" value="${dev.DB_USERNAME}" />
+          <token key="DB_PASSWORD" value="${dev.DB_PASSWORD}" />
+          <token key="CACHE_DRIVER" value="${dev.CACHE_DRIVER}" />
+          <token key="SESSION_DRIVER" value="${dev.SESSION_DRIVER}" />
+          <token key="QUEUE_DRIVER" value="${dev.QUEUE_DRIVER}" />
+          <token key="REDIS_HOST" value="${dev.REDIS_HOST}" />
+          <token key="REDIS_PASSWORD" value="${dev.REDIS_PASSWORD}" />
+          <token key="REDIS_PORT" value="${dev.REDIS_PORT}" />
+          <token key="FACEBOOK_CLIENT_ID" value="${dev.FACEBOOK_CLIENT_ID}" />
+          <token key="FACEBOOK_CLIENT_SECRET" value="${dev.FACEBOOK_CLIENT_SECRET}" />
+          <token key="FACEBOOK_REDIRECT_URL" value="${dev.FACEBOOK_REDIRECT_URL}" />
+          <token key="LINKEDIN_CLIENT_ID" value="${dev.LINKEDIN_CLIENT_ID}" />
+          <token key="LINKEDIN_CLIENT_SECRET" value="${dev.LINKEDIN_CLIENT_SECRET}" />
+          <token key="LINKEDIN_REDIRECT_URL" value="${dev.LINKEDIN_REDIRECT_URL}" />
+          <token key="TWITTER_CLIENT_ID" value="${dev.TWITTER_CLIENT_ID}" />
+          <token key="TWITTER_CLIENT_SECRET" value="${dev.TWITTER_CLIENT_SECRET}" />
+          <token key="TWITTER_REDIRECT_URL" value="${dev.TWITTER_REDIRECT_URL}" />
+          <token key="LINKEDIN_AUTH_CALLBACK" value="${dev.LINKEDIN_AUTH_CALLBACK}" />
+          <token key="FACEBOOK_VERIFICATION_CALLBACK" value="${dev.FACEBOOK_VERIFICATION_CALLBACK}" />
+          <token key="LINKEDIN_VERIFICATION_CALLBACK" value="${dev.LINKEDIN_VERIFICATION_CALLBACK}" />
+          <token key="TWITTER_VERIFICATION_CALLBACK" value="${dev.TWITTER_VERIFICATION_CALLBACK}" />
+          <token key="MAIL_DRIVER" value="${dev.MAIL_DRIVER}" />
+          <token key="MAIL_HOST" value="${dev.MAIL_HOST}" />
+          <token key="MAIL_PORT" value="${dev.MAIL_PORT}" />
+          <token key="MAIL_USERNAME" value="${dev.MAIL_USERNAME}" />
+          <token key="MAIL_PASSWORD" value="${dev.MAIL_PASSWORD}" />
+          <token key="MAIL_ENCRYPTION" value="${dev.MAIL_ENCRYPTION}" />
+					<token key="TWILIO_SID" value="${dev.TWILIO_SID}" />
+					<token key="TWILIO_TOKEN" value="${dev.TWILIO_TOKEN}" />
+					<token key="TWILIO_FROM" value="${dev.TWILIO_FROM}" />
+				</replacetokens>
+			</filterchain>
+		</copy>
+	</target>
+
+	<target name="prod">
+		<copy file="build/.env.dist" tofile=".env" overwrite="true">
+			<filterchain>
+				<replacetokens begintoken="%" endtoken="%">
+          <token key="APP_ENV" value="${prod.APP_ENV}" />
+					<token key="APP_DEBUG" value="${prod.APP_DEBUG}" />
+					<token key="APP_DEBUG_FULL" value="${prod.APP_DEBUG_FULL}" />
+					<token key="APP_KEY" value="${prod.APP_KEY}" />
+					<token key="APP_URL" value="${prod.APP_URL}" />
+          <token key="DB_CONNECTION" value="${prod.DB_CONNECTION}" />
+					<token key="DB_HOST" value="${prod.DB_HOST}" />
+					<token key="DB_PORT" value="${prod.DB_PORT}" />
+					<token key="DB_DATABASE" value="${prod.DB_DATABASE}" />
+					<token key="DB_USERNAME" value="${prod.DB_USERNAME}" />
+          <token key="DB_PASSWORD" value="${prod.DB_PASSWORD}" />
+          <token key="CACHE_DRIVER" value="${prod.CACHE_DRIVER}" />
+          <token key="SESSION_DRIVER" value="${prod.SESSION_DRIVER}" />
+          <token key="QUEUE_DRIVER" value="${prod.QUEUE_DRIVER}" />
+          <token key="REDIS_HOST" value="${prod.REDIS_HOST}" />
+          <token key="REDIS_PASSWORD" value="${prod.REDIS_PASSWORD}" />
+          <token key="REDIS_PORT" value="${prod.REDIS_PORT}" />
+          <token key="FACEBOOK_CLIENT_ID" value="${prod.FACEBOOK_CLIENT_ID}" />
+          <token key="FACEBOOK_CLIENT_SECRET" value="${prod.FACEBOOK_CLIENT_SECRET}" />
+          <token key="FACEBOOK_REDIRECT_URL" value="${prod.FACEBOOK_REDIRECT_URL}" />
+          <token key="LINKEDIN_CLIENT_ID" value="${prod.LINKEDIN_CLIENT_ID}" />
+          <token key="LINKEDIN_CLIENT_SECRET" value="${prod.LINKEDIN_CLIENT_SECRET}" />
+          <token key="LINKEDIN_REDIRECT_URL" value="${prod.LINKEDIN_REDIRECT_URL}" />
+          <token key="TWITTER_CLIENT_ID" value="${prod.TWITTER_CLIENT_ID}" />
+          <token key="TWITTER_CLIENT_SECRET" value="${prod.TWITTER_CLIENT_SECRET}" />
+          <token key="TWITTER_REDIRECT_URL" value="${prod.TWITTER_REDIRECT_URL}" />
+          <token key="LINKEDIN_AUTH_CALLBACK" value="${prod.LINKEDIN_AUTH_CALLBACK}" />
+          <token key="FACEBOOK_VERIFICATION_CALLBACK" value="${prod.FACEBOOK_VERIFICATION_CALLBACK}" />
+          <token key="LINKEDIN_VERIFICATION_CALLBACK" value="${prod.LINKEDIN_VERIFICATION_CALLBACK}" />
+          <token key="TWITTER_VERIFICATION_CALLBACK" value="${prod.TWITTER_VERIFICATION_CALLBACK}" />
+          <token key="MAIL_DRIVER" value="${prod.MAIL_DRIVER}" />
+          <token key="MAIL_HOST" value="${prod.MAIL_HOST}" />
+          <token key="MAIL_PORT" value="${prod.MAIL_PORT}" />
+          <token key="MAIL_USERNAME" value="${prod.MAIL_USERNAME}" />
+          <token key="MAIL_PASSWORD" value="${prod.MAIL_PASSWORD}" />
+          <token key="MAIL_ENCRYPTION" value="${prod.MAIL_ENCRYPTION}" />
+					<token key="TWILIO_SID" value="${prodTWILIO_SID}" />
+					<token key="TWILIO_TOKEN" value="${prod.TWILIO_TOKEN}" />
+					<token key="TWILIO_FROM" value="${prod.TWILIO_FROM}" />
+				</replacetokens>
+			</filterchain>
+		</copy>
+	</target>
+</project>

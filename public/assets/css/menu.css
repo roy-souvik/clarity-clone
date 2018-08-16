@@ -1,0 +1,102 @@
+
+.toggleMenu {
+    display:  none;
+    color: #fff; float:left; background:url(../images/menu_bg1.png) no-repeat 0 0; width:44px; height:32px; font-size:0; right:68px; top:25px; position:absolute;
+}
+.navi {
+    list-style: none;
+     *zoom: 1; padding-left:112px;
+}
+.navi:before,
+.navi:after {
+    content: " "; 
+    display: table; 
+}
+.navi:after {
+    clear: both;
+}
+.navi ul {
+    list-style: none;
+    width:230px;
+}
+.navi a {
+    
+    color:#bdbdbd; font-size:15px; font-weight:400; padding: 28px 0;
+}
+.navi li {
+    position: relative; /*text-transform:uppercase;*/ padding: 0 15px;
+}
+.navi > li {
+	/*display:inline-block;*/
+	float:left;
+   
+}
+.navi > li > .parent {
+    background-image: url("images/downArrow.png");
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.navi li:hover a{color:#fff;}
+.navi li.active a{color:#fff; border-bottom:4px solid #6fd132;}
+.navi > li > a {
+    display: block;
+}
+.navi li  ul {
+    position: absolute;
+    left: -9999px;
+}
+.navi > li.hover > ul {
+    left: 0;
+}
+.navi li li.hover ul {
+    left: 100%;
+    top: 0;
+}
+.navi li li a {
+    display: block;
+    background: #7acb4b;
+    position: relative;
+    z-index:100;
+    border-bottom: 1px solid #5dab2f; padding:6px 10px; color:#fff;
+}
+header.smaller .navi li li a {padding:6px 10px;}
+.navi li li{padding:0;}
+.navi li li li{padding:0;}
+.navi li li:hover a{ color:#194100;}
+.navi li li a.parent {background:url(../images/arrowright.png) no-repeat 95% 12px #7acb4b;}
+.navi li.active li a{border-bottom: 1px solid #5dab2f; }
+
+.navi li li:hover li a {
+    background:#3c7f13;
+    z-index:200;
+    border-top: 1px solid #5aaa29; color:#fff; border-bottom:none;
+}
+.navi li li:hover li a:hover{color:#a0ec71;}
+
+@media screen and (max-width: 767px) {
+    .active {
+        display: block;
+    }
+    .navi > li {
+        float: none;
+    }
+    .navi > li > .parent {
+        background-position: 95% 50%;
+    }
+	.navi li a.parent {background:url(../images/arrowbott.png) no-repeat 95% 19px ;}
+   .navi li li a.parent {background:url(../images/arrowbott.png) no-repeat 95% 12px #7acb4b;}
+    .navi ul {
+        display: block;
+        width: 100%;
+    }
+   .navi > li.hover > ul , .navi li li.hover ul {
+        position: static;
+    }
+	.navi {padding-left:0 !important; z-index:9999; position:absolute; width:90%; text-align:left; top:65px; background:#d74b4b; left:6% !important; border-radius:6px;}
+	.navi a {padding:7px 15px; border-bottom:1px solid #93d569; color:#0f2800;}
+	.navi li:hover a{color:#68934e;}
+	.navi li.active a{color:#0f2800;}
+	header.smaller .navi a {padding:7px 15px; font-size:15px;}
+	
+
+}

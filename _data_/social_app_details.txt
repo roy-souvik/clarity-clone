@@ -1,0 +1,25 @@
+FB: Monster Call - clarity-clone.local
+----------------------
+
+APP_URL:
+http://clarity-clone.local
+
+App ID:
+354119661378897
+
+App Secret:
+1425aa518d4941625ecfc4104e7b50b4
+
+
+
+FB: Monster Call - Dev
+----------------------
+
+APP_URL:
+http://dev.monstercall.preptest.in
+
+App ID:
+1072485966159682
+
+App Secret:
+a88c410426cbec41d23402753fd4e216
